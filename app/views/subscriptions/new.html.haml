@@ -1,0 +1,6 @@
+= form_for @subscription, url: "" do |f|
+  = f.hidden_field :channel_id
+  = f.label :email
+  = f.text_field :email
+
+  = f.submit

@@ -1,0 +1,11 @@
+es:
+  helpers:
+     submit:
+      create: Enviar
+  activerecord:
+    models:
+      channel: Canal
+      subscription: Suscripción
+    attributes:
+      subscription:
+        email: Correo
