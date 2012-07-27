@@ -2,7 +2,8 @@
 
 Dado /^(No )?Existe el canal "(.*?)"$/ do |negative, name|
   if negative
-    Channel.destroy name
+    channel = Channel.find_by_name(name)
+    channel.destroy if channel
   else
     FactoryGirl.create :channel, name: name
   end

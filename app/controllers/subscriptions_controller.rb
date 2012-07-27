@@ -2,8 +2,12 @@ class SubscriptionsController < ApplicationController
 
   def new
     @channel = Channel.find_by_name(params[:name])
-
-    @subscription = @channel.subscriptions.build
+    if @channel
+      @subscription = @channel.subscriptions.build
+    else
+      flash[:error] = t("messages.channel.doesnt_exist")
+      render "error"
+    end
   end
 
   def create

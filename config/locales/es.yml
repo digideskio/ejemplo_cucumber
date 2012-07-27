@@ -9,3 +9,6 @@ es:
     attributes:
       subscription:
         email: Correo
+  messages:
+    channel:
+      doesnt_exist: No existe el canal
